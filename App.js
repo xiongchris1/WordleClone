@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { colors } from "./src/constants";
+import Keyboard from "./src/components/Keyboard/Keyboard.js";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="light" />
+
+      <Text style={styles.title}>WORDLE</Text>
+      <Keyboard />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: colors.black,
+    alignItems: "center",
+  },
+  title: {
+    color: colors.lightgrey,
+    fontSize: 30,
+    fontWeight: "bold",
+    letterSpacing: 6,
   },
 });
