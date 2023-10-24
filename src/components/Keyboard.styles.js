@@ -1,14 +1,14 @@
 import { StyleSheet, Dimensions } from "react-native";
-import { keys, colors } from "../../constants";
+import { keys, colors } from "../constants";
 
 const screenWidth = Dimensions.get("window").width;
 export const keyWidth = (screenWidth - 10) / keys[0].length;
-const keyHeight = keyWidth * 1.3;
+const keyHeight = keyWidth * 1.6;
 
 export default StyleSheet.create({
   keyboard: {
     alignSelf: "stretch",
-    marginTop: "auto",
+    marginBottom: 50,
   },
   row: {
     alignSelf: "stretch",
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     width: keyWidth - 4,
     height: keyHeight - 4,
     margin: 2,
-    borderRadius: 5,
+    borderRadius: 7,
     backgroundColor: colors.grey,
     justifyContent: "center",
     alignItems: "center",
